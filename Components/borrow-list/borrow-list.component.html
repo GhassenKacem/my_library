@@ -1,0 +1,24 @@
+
+<app-menu></app-menu>
+<div class="container">
+    <h2>Borrow Request List </h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-lg-3">Book Title</div>
+        <div class="col col-md-3">Lending start date</div>
+        <div class="col col-3">Lending end date </div>
+        <div class="col col-2">Cancel The demand</div>
+      </li>
+      <li class="table-row" *ngFor = "let borrow of borrows">
+        <div class="col col-lg-3"  >{{borrow.book.title}}</div>
+        <div class="col col-md-3"  >{{borrow.startDate}}</div>
+        <div class="col col-3" >{{borrow.endDate}}</div>
+        <div class="col col-2"  >
+            <button *ngIf="!borrow.borrow_request"  style="background-color: transparent; border-color: transparent" (click) = DeleteBorrowRequest(borrow.id)>
+            <i class="fas fa-times-circle fa-2x" style="color: red;"></i>
+        </button>
+        <span *ngIf="borrow.borrow_request" style="color: rgba(0, 90, 5, 0.733);">Your Demand has been Accepted</span>
+     </div>
+      </li>
+    </ul>
+  </div>

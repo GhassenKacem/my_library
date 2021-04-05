@@ -1,0 +1,25 @@
+<div class="testbox">
+    <form action="/"  #f="ngForm"  (ngSubmit)="Add_borrow(f)">
+      <div class="banner">
+        <h1>BORROW A BOOK</h1>
+      </div>
+        
+      <div class="item">
+        <label for="startDate">Borrow Date <span>*</span></label>
+        <input id="startDate" type="date" ngModel name="startDate" required/>
+        <i class="fas fa-calendar-alt" style="color: sienna;"></i>
+      </div>
+      <div class="item">
+        <label for="endDate">Return Date <span>*</span></label>
+        <input id="endDate" type="date" ngModel name="endDate" required/>
+        <i class="fas fa-calendar-alt" style="color: sienna;"></i>
+      </div>
+
+       
+      <div class="btn-block">
+        <button type="submit" href="/">Send</button>
+      </div>
+    </form>
+  </div>
+
+  

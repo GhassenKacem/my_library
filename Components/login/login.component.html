@@ -1,0 +1,22 @@
+ 
+<div class="container">
+  <section id="content">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <h1>Login Form</h1>
+      <div class="register-error" *ngIf="errorMessage"> **>>> {{errorMessage}} <<<** </div>
+      <div>
+        <input type="text" ngModel name="username" placeholder="Username" required="" id="username" />
+      </div>
+      <div>
+        <input type="password" ngModel name="password" placeholder="Password" required="" id="password" />
+      </div>
+      <div>
+        <input type="submit" value="Log in" />
+        <a href="#">Lost your password?</a>
+        <a routerLink="/signup" >Register</a>
+      </div>
+    </form><!-- form -->
+    
+  </section><!-- content -->
+</div><!-- container -->
+ 

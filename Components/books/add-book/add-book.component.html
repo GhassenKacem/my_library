@@ -1,0 +1,121 @@
+<div class="testbox">
+    <form action="/"  #f="ngForm"  (ngSubmit)="Add_book(f)">
+      <div class="banner">
+        <h1>ADD NEW BOOK TO THE LIBRARY</h1>
+      </div>
+      <div class="add-success" *ngIf="successMessage"> **>>> {{successMessage}} <<<** </div>
+      <div class="item">
+        <div class="row">
+            <div class="col"> <label for="publisher">Publisher <span>*</span></label> <input id="publisher" type="text" ngModel name="publisher"  /></div>
+            <div class="col"><label for="author">Author <span>*</span></label><input type="text" ngModel name="author"   /></div></div>
+      </div>
+      <div class="item">
+        <label for="email">Title <span>*</span></label>
+        <input id="email" type="text" ngModel name="title"/>
+      </div>
+      <div class="item">
+        <label for="publicationDate">Publication Date <span>*</span></label>
+        <input id="publicationDate" type="date" ngModel name="publicationDate" required/>
+        <i class="fas fa-calendar-alt" style="color: sienna;"></i>
+      </div>
+
+      <div class="item">
+        <div class="name-item">
+          <div>
+            <label for="price">Price <span>*</span></label>
+            <input id="price" type="number" ngModel name="price" />
+          </div>
+          <div>
+            <label for="printLength">Print Length <span>*</span></label>
+            <input id="printLength" type="number" ngModel name="printLength" />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <label for="Language">Language <span>*</span></label><br><br>
+        <select  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" ngModel name="language">
+            <option value="Afrikaans">Afrikaans</option>
+            <option value="Albanian">Albanian</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Armenian">Armenian</option>
+            <option value="Basque">Basque</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Bulgarian">Bulgarian</option>
+            <option value="Catalan">Catalan</option>
+            <option value="Cambodian">Cambodian</option>
+            <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+            <option value="Croatian">Croatian</option>
+            <option value="Czech">Czech</option>
+            <option value="Danish">Danish</option>
+            <option value="Dutch">Dutch</option>
+            <option value="English">English</option>
+            <option value="Estonian">Estonian</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finnish">Finnish</option>
+            <option value="French">French</option>
+            <option value="Georgian">Georgian</option>
+            <option value="German">German</option>
+            <option value="Greek">Greek</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="Hebrew">Hebrew</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Hungarian">Hungarian</option>
+            <option value="Icelandic">Icelandic</option>
+            <option value="Indonesian">Indonesian</option>
+            <option value="Irish">Irish</option>
+            <option value="Italian">Italian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Javanese">Javanese</option>
+            <option value="Korean">Korean</option>
+            <option value="Latin">Latin</option>
+            <option value="Latvian">Latvian</option>
+            <option value="Lithuanian">Lithuanian</option>
+            <option value="Macedonian">Macedonian</option>
+            <option value="Malay">Malay</option>
+            <option value="Malayalam">Malayalam</option>
+            <option value="Maltese">Maltese</option>
+            <option value="Maori">Maori</option>
+            <option value="Marathi">Marathi</option>
+            <option value="Mongolian">Mongolian</option>
+            <option value="Nepali">Nepali</option>
+            <option value="Norwegian">Norwegian</option>
+            <option value="Persian">Persian</option>
+            <option value="Polish">Polish</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Punjabi">Punjabi</option>
+            <option value="Quechua">Quechua</option>
+            <option value="Romanian">Romanian</option>
+            <option value="Russian">Russian</option>
+            <option value="Samoan">Samoan</option>
+            <option value="Serbian">Serbian</option>
+            <option value="Slovak">Slovak</option>
+            <option value="Slovenian">Slovenian</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Swahili">Swahili</option>
+            <option value="Swedish ">Swedish </option>
+            <option value="Tamil">Tamil</option>
+            <option value="Tatar">Tatar</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Thai">Thai</option>
+            <option value="Tibetan">Tibetan</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Turkish">Turkish</option>
+            <option value="Ukrainian">Ukrainian</option>
+            <option value="Urdu">Urdu</option>
+            <option value="Uzbek">Uzbek</option>
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="Welsh">Welsh</option>
+            <option value="Xhosa">Xhosa</option>
+          </select>
+      </div>
+      <div class="item">
+        <label for="description">Description <span>*</span></label>
+        <textarea id="description" rows="3" ngModel name="description"></textarea>
+      </div>
+      <div class="btn-block">
+        <button type="submit" href="/">Send</button>
+      </div>
+    </form>
+  </div>
+
+  
